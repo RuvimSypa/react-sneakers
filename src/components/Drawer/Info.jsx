@@ -9,7 +9,7 @@ export default ({ title, description, imageUrl }) => {
       <h2>{title}</h2>
       <p className='opacity-6'>{description}</p>
       <button className='greenButton' onClick={() => setOpenCart(false)}>
-        <img src="/img/arrow.svg" alt="Arrow"/>
+        <img src="img/arrow.svg" alt="Arrow"/>
         <span>Вернуться назад</span>
       </button>
     </div>

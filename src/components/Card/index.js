@@ -38,9 +38,9 @@ const Card = ({
       ) : (
         <>
           <div className={styles.favorite}>
-            <img src={`/img/heart-${isFavorite ? 'liked' : 'unliked'}.svg`} onClick={onClickFavorite} alt="Liked"/>
+            <img src={`img/heart-${isFavorite ? 'liked' : 'unliked'}.svg`} onClick={onClickFavorite} alt="Liked"/>
           </div>
-          <img width={133} height={112} src={`/img/sneakers/${imageName}.jpg`} alt=""/>
+          <img width={133} height={112} src={`img/sneakers/${imageName}.jpg`} alt=""/>
           <h5>{name}</h5>
           <div className='d-flex justify-between align-center'>
             <div className='d-flex flex-column'>
@@ -49,7 +49,7 @@ const Card = ({
             </div>
             <img
               className={styles.button}
-              src={`/img/btn-${isItemAdded(id) ? 'checked' : 'plus'}.svg`}
+              src={`img/btn-${isItemAdded(id) ? 'checked' : 'plus'}.svg`}
               alt="Plus"
               onClick={() => onAddToCart(item)}
             />

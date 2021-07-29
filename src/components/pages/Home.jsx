@@ -20,8 +20,8 @@ export default ({ searchInput, setSearchInput, onChangeInputSearch, isLoading })
       <div className='d-flex justify-between align-center mb-40'>
         <h2>{searchInput ? `Поиск по запросу: ${searchInput}` : 'Все кроссовки'}</h2>
         <div className="search-block">
-          <img src="/img/search.svg" alt="Search"/>
-          {searchInput && <img className='clear' src="/img/btn-remove.svg" alt="Clear" onClick={() => setSearchInput('')}/>}
+          <img src="img/search.svg" alt="Search"/>
+          {searchInput && <img className='clear' src="img/btn-remove.svg" alt="Clear" onClick={() => setSearchInput('')}/>}
           <input type="text" placeholder='Поиск...' onChange={onChangeInputSearch} value={searchInput}/>
         </div>
       </div>

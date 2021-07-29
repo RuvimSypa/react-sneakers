@@ -10,7 +10,7 @@ export default ({ onOpenCart }) => {
     <header className='d-flex justify-between p-40'>
       <Link to='/'>
         <div className='d-flex align-center headerLeft'>
-          <img src='/img/logo.png' alt='logo'/>
+          <img src='img/logo.png' alt='logo'/>
           <div className="headerInfo">
             <h1 className='text-uppercase'>REACT SNEAKERS</h1>
             <span className='opacity-7'>Магазин лучших кроссовок</span>
@@ -19,17 +19,17 @@ export default ({ onOpenCart }) => {
       </Link>
       <ul className='d-flex headerRight'>
         <li className='d-flex align-center mr-30' onClick={onOpenCart}>
-          <img width='20' height='20' src='/img/cart.svg' alt='cart' className='mr-10'/>
+          <img width='20' height='20' src='img/cart.svg' alt='cart' className='mr-10'/>
           <span>{total} руб.</span>
         </li>
         <li className='mr-30'>
           <Link to='/favorites'>
-            <img src='/img/favorite.svg' alt='favorite'style={{ verticalAlign: 'middle'}}/>
+            <img src='img/favorite.svg' alt='favorite'style={{ verticalAlign: 'middle'}}/>
           </Link>
         </li>
         <li>
           <Link to='/orders'>
-            <img src='/img/user.svg' alt='user' style={{ verticalAlign: 'middle'}}/>
+            <img src='img/user.svg' alt='user' style={{ verticalAlign: 'middle'}}/>
           </Link>
         </li>
       </ul>
