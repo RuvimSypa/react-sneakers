@@ -22,9 +22,9 @@ function App() {
   useEffect( () => {
     async function fetchData() {
       try {
-        const cartItemsResponse = await axios.get('/cart');
-        const favoritesResponse = await axios.get('/favorites');
-        const itemsResponse = await axios.get('/items');
+        const cartItemsResponse = await axios.get('https://6101a15749a5370017871226.mockapi.io/cart');
+        const favoritesResponse = await axios.get('https://6101a15749a5370017871226.mockapi.io/favorites');
+        const itemsResponse = await axios.get('https://6101a15749a5370017871226.mockapi.io/items');
 
         setIsLoading(false)
         setCartItems([...cartItemsResponse.data]);
@@ -43,10 +43,10 @@ function App() {
       const findItem = cartItems.find((cartItem) => +cartItem.parentId === +item.id);
       if (findItem) {
         setCartItems((prevCartItems) => prevCartItems.filter((cartItem) => +cartItem.parentId !== +item.id));
-        await axios.delete(`/cart/${findItem.id}`);
+        await axios.delete(`https://6101a15749a5370017871226.mockapi.io/cart/${findItem.id}`);
       } else {
         setCartItems((prevCartItems) => [...prevCartItems, item]);
-        const { data } = await axios.post('/cart', item);
+        const { data } = await axios.post('https://6101a15749a5370017871226.mockapi.io/cart', item);
         setCartItems((prevCartItems) =>
           prevCartItems.map((prevCartItem) => {
             if (prevCartItem.parentId === data.parentId) {
@@ -66,7 +66,7 @@ function App() {
 
   const onRemoveItemInCart = async (id) => {
     try {
-      await axios.delete(`/cart/${id}`)
+      await axios.delete(`https://6101a15749a5370017871226.mockapi.io/cart/${id}`)
       setCartItems((prevCartItems) => prevCartItems.filter((item) => item.id !== id))
     } catch (err) {
       console.error(err)
@@ -77,7 +77,7 @@ function App() {
   const onAddToFavorites = (item) => {
     try {
       if (favorites.find((favorite) => +favorite.id === +item.id)) {
-        axios.delete(`/favorites/${item.id}`);
+        axios.delete(`https://6101a15749a5370017871226.mockapi.io/favorites/${item.id}`);
         setFavorites((prevFavorites) => prevFavorites.filter((favorite) => +favorite.id !== +item.id))
       } else {
         axios
