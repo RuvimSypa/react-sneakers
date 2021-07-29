@@ -45,6 +45,7 @@ function App() {
         setCartItems((prevCartItems) => prevCartItems.filter((cartItem) => +cartItem.parentId !== +item.id));
         await axios.delete(`https://6101a15749a5370017871226.mockapi.io/cart/${findItem.id}`);
       } else {
+        setCartItems((prevCartItems) => [...prevCartItems, item]);
         const { data } = await axios.post('https://6101a15749a5370017871226.mockapi.io/cart', item);
         setCartItems((prevCartItems) =>
           prevCartItems.map((prevCartItem) => {
