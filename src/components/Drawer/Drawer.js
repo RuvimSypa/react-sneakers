@@ -18,12 +18,12 @@ export default ({ onClose, items, onRemove, opened }) => {
   const onClickOrder = async () => {
     setIsLoading(true);
     try {
-      const responseOrders = await axios.post('https://6101a15749a5370017871226.mockapi.io/orders', { items: cartItems });
+      const responseOrders = await axios.post('/orders', { items: cartItems });
       setOrderId(responseOrders.data.id)
       setIsOrderComplete(true);
       setCartItems([]);
       for (const cartItem of cartItems) {
-        await axios.delete(`https://6101a15749a5370017871226.mockapi.io/cart/${cartItem.id}`);
+        await axios.delete(`/cart/${cartItem.id}`);
         await delay(1000);
       }
     } catch (err) {

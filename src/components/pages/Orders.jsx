@@ -9,7 +9,7 @@ export default () => {
   useEffect(() => {
     (async () => {
       try {
-        const { data } = await axios.get('https://6101a15749a5370017871226.mockapi.io/orders');
+        const { data } = await axios.get('/orders');
         setOrders(data.reduce((prev, order) => [...prev, ...order.items], []));
         setIsLoading(false)
       } catch (err) {
