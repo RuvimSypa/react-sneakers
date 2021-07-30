@@ -81,7 +81,7 @@ function App() {
         setFavorites((prevFavorites) => prevFavorites.filter((favorite) => +favorite.id !== +item.id))
       } else {
         axios
-          .post('/favorites', item)
+          .post('https://6101a15749a5370017871226.mockapi.io//favorites', item)
           .then(({ data }) => {
             setFavorites((prevFavorites) => [...prevFavorites, { ...item, id: data.id }])
           })
