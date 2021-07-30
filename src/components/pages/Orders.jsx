@@ -21,7 +21,7 @@ export default () => {
   return (
     <div className="content p-40">
       <div className='d-flex justify-between align-center mb-40'>
-        <h2>{orders.length ? 'Мои заказы' : 'Мои закладки'}</h2>
+        <h2>{orders.length ? 'Мои заказы' : 'Мои заказы'}</h2>
       </div>
       <div className='d-flex flex-wrap'>
         {(isLoading ? [...Array(8)] : orders)

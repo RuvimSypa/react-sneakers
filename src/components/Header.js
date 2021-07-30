@@ -8,7 +8,7 @@ export default ({ onOpenCart }) => {
 
   return (
     <header className='d-flex justify-between p-40'>
-      <Link to='/'>
+      <Link to='/react-sneakers/'>
         <div className='d-flex align-center headerLeft'>
           <img src='img/logo.png' alt='logo'/>
           <div className="headerInfo">
@@ -23,12 +23,12 @@ export default ({ onOpenCart }) => {
           <span>{total} руб.</span>
         </li>
         <li className='mr-30'>
-          <Link to='/favorites'>
+          <Link to='/react-sneakers/favorites'>
             <img src='img/favorite.svg' alt='favorite'style={{ verticalAlign: 'middle'}}/>
           </Link>
         </li>
         <li>
-          <Link to='/orders'>
+          <Link to='/react-sneakers/orders'>
             <img src='img/user.svg' alt='user' style={{ verticalAlign: 'middle'}}/>
           </Link>
         </li>
