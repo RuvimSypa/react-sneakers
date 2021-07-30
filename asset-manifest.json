@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-sneakers/static/css/main.cbc9aa38.chunk.css",
-    "main.js": "/react-sneakers/static/js/main.e0647469.chunk.js",
-    "main.js.map": "/react-sneakers/static/js/main.e0647469.chunk.js.map",
+    "main.js": "/react-sneakers/static/js/main.11d229f2.chunk.js",
+    "main.js.map": "/react-sneakers/static/js/main.11d229f2.chunk.js.map",
     "runtime-main.js": "/react-sneakers/static/js/runtime-main.9ec74d9c.js",
     "runtime-main.js.map": "/react-sneakers/static/js/runtime-main.9ec74d9c.js.map",
     "static/css/2.1cdcfe91.chunk.css": "/react-sneakers/static/css/2.1cdcfe91.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.1cdcfe91.chunk.css",
     "static/js/2.c54d8482.chunk.js",
     "static/css/main.cbc9aa38.chunk.css",
-    "static/js/main.e0647469.chunk.js"
+    "static/js/main.11d229f2.chunk.js"
   ]
 }
